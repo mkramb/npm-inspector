@@ -1,0 +1,23 @@
+{
+  "name": "npm-inspector",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Mitja Kramberger <mitja.kramberge@gmail.com>",
+  "main": "build/app/js/main.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mkramb/npm-inspector.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf build ; copyfiles app/* build",
+    "build": "ts-commander build ; ts-commander compile",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "electron": "^1.6.11",
+    "rimraf": "^2.6.1",
+    "ts-commander": "^1.0.2"
+  }
+}
